@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./Rubik/static/Rubik-Regular.ttf");
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Rubik";
+  font-size: 0.9em;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  margin: 0 auto;
+  background-image: url(./images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.input-section h1 {
+  color: white;
+}
+.ip-input-container {
+  display: flex;
+  width: 30vw;
+  height: 40px;
+  
+
+}
+
+.ip-input {
+  /* flex-grow: 3; */
+  width: 25vw;
+  border-radius: 10px 0px 0px 10px;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 20px;
+
+}
+.ip-input:focus{
+  outline: none;
+}
+.arrow-wrap {
+  display: flex;
+  background-color: black;
+  width: 5vw;
+  align-items: center;
+  border-radius: 0px 10px 10px 0px;
+  border-width: 0;
+  justify-content: center;
+  
+}
+.arrow-wrap:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+
+.display-section {
+  display: flex;
+  background-color: white;
+  min-width: 85vw;
+  justify-content: flex-end;
+  width: 80vw;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 10px 0px hsl(0, 0%, 59%);
+  z-index: 1;
+}
+
+.region-wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.display-section h2 {
+  margin-top: 8px;
+}
+#map {
+  background-color: aqua;
+  height: 380px;
+  width: 100%;
+  margin: -90px auto;
+  z-index: 0;
+}
+@media screen and (max-width: 435px) {
+  .container {
+    min-width: 100px;
+    font-size: 1.1em;
+   
+  }
+  .ip-input{
+    width: 65vw;
+  }
+  .arrow-wrap{
+    width: 15vw;
+  }
+
+  .ip-input-container {
+    width: 80vw;
+    margin: 0 auto;
+    height: 60px;
+  }
+
+  .display-section {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 20px auto;
+    align-items: center;
+    gap: 5px;
+  }
+  .location-wrap,
+  .time-wrap,
+  .isp-wrap,
+  .ip-address-wrap {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 0px; */
+    align-items: center;
+  }
+
+  .region-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+  }
+
+  hr {
+    display: none;
+  }
+}
